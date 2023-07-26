@@ -10,7 +10,7 @@ const commentSchema = new Schema({
 });
 
 const postSchema = new Schema({
-  topic: String,
+  topic: { type: Schema.Types.ObjectId, ref: 'Topic' },
   title: {
       type: String,
       required: true,
