@@ -7,7 +7,14 @@ const topicSchema = new Schema({
       required: true,
   },
   hotness: Number,
-  rating: Number,
+  ranking: Number,
+  relStatus: {
+    voteId: Schema.Types.ObjectId,
+    voters: {},
+    keep: Number,
+    replace: Number,
+    competitor: String,
+  }
 });
 
 export default mongoose.model('Topic', topicSchema);
