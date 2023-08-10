@@ -8,12 +8,14 @@ const topicSchema = new Schema({
   },
   hotness: Number,
   ranking: Number,
+  created: Date,
   relStatus: {
     voteId: Schema.Types.ObjectId,
     voters: {},
     keep: Number,
     replace: Number,
     competitor: String,
+    voteExpiresAt: Date,
   }
 });
 
