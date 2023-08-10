@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
-  comment: String,
+  text: String,
+  edited: Boolean,
   rating: Number,
   raters: {},
   created: Date,
@@ -16,6 +17,7 @@ const postSchema = new Schema({
       required: true,
   },
   description: String,
+  edited: Boolean,
   rating: Number,
   raters: {},
   created: Date,
